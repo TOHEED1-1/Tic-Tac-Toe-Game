@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  text-align: center;
+  background-color: aqua;
+  height: 100vh;
+}
+.container {
+  height: 80%;
+  max-height: 500px;
+  width: 80%;
+  max-width: 500px;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+.game {
+  padding: 5px;
+  height: 90%;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: blanchedalmond;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+}
+footer {
+  margin-top: 5px;
+  background-color: black;
+  border-radius: 30px;
+  width: 300px;
+  justify-self: center;
+}
+.my-h1 {
+  font-size: 2rem;
+  color: blue;
+  width: 200px;
+  padding: 5px;
+  justify-self: center;
+}
+.box {
+  flex: 1 1 30%; /* flex-grow, flex-shrink, flex-basis */
+  height: auto;
+  font-size: 4rem;
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  border: none;
+  background-color: brown;
+  color: white;
+}
+
+.o {
+  color: white;
+}
+.x {
+  color: black;
+}
+
+#reset-btn {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  background-color: rgb(55, 10, 97);
+  color: white;
+  font-size: 1rem;
+  transition: all 0.5s ease-in-out;
+}
+#reset-btn:hover {
+  background-color: rgb(26, 3, 48);
+}
+
+#new-btn {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  background-color: rgb(127, 0, 247);
+  color: white;
+  font-size: 1rem;
+  transition: all 0.4s ease-in-out;
+}
+#new-btn:hover {
+  background-color: rgb(67, 5, 124);
+}
+
+.winning-msg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 7px;
+  background-color: lightblue;
+  height: 50vh;
+  width: 45vh;
+  z-index: 10000;
+  border-radius: 25px;
+  position: fixed;
+  top: 20%;
+  justify-self: center;
+}
+.win-Msg {
+  margin-top: 5px;
+}
+.hide {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+    height: 70vh;
+    width: 70vh;
+  }
+  .game {
+    height: 60vh;
+    width: 60vh;
+    gap: 10px;
+    background-color: blanchedalmond;
+    border-radius: 17px;
+  }
+  .box {
+    width: 18vh;
+    height: 18vh;
+    border-radius: 20px;
+    border: none;
+    background-color: brown;
+    font-size: 4rem;
+    color: white;
+  }
+  footer {
+    margin-top: 5px;
+    border-radius: 30px;
+    width: 200px;
+    justify-self: center;
+  }
+  .my-h1 {
+    font-size: 1.5rem;
+    width: 180px;
+    padding: 5px;
+    justify-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 60vh;
+    height: 60vh;
+  }
+  .game {
+    height: 50vh;
+    width: 50vh;
+    gap: 8px;
+    background-color: blanchedalmond;
+    border-radius: 17px;
+  }
+  .box {
+    width: 80px;
+    height: 80px;
+    border-radius: 18px;
+    font-size: 4rem;
+  }
+  .winning-msg {
+    gap: 1rem;
+    padding: 7px;
+    background-color: lightblue;
+    height: auto;
+    width: 90%;
+    max-width: 300px;
+    z-index: 100;
+    border-radius: 25px;
+    position: fixed;
+    top: 20%;
+    justify-self: center;
+  }
+  .hide {
+    display: none;
+  }
+  #reset-btn,
+  #new-btn {
+    padding: 7px;
+    border-radius: 7px;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    width: 40%;
+  }
+  footer {
+    margin-top: 5px;
+    border-radius: 30px;
+    width: 180px;
+    justify-self: center;
+  }
+  .my-h1 {
+    font-size: 1rem;
+    width: 160px;
+    padding: 2px;
+    justify-self: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    width: 250px;
+    height: auto;
+  }
+  .game {
+    height: 50%;
+    width: 50vh;
+    gap: 8px;
+    background-color: blanchedalmond;
+    border-radius: 17px;
+  }
+  .box {
+    width: 70px;
+    height: 70px;
+    border-radius: 18px;
+    font-size: 4rem;
+  }
+  .winning-msg {
+    gap: 1rem;
+    padding: 7px;
+    background-color: lightblue;
+    height: auto;
+    width: 90%;
+    max-width: 300px;
+    z-index: 100;
+    border-radius: 25px;
+    position: fixed;
+    top: 20%;
+    justify-self: center;
+    align-self: center;
+  }
+  .hide {
+    display: none;
+  }
+  #reset-btn,
+  #new-btn {
+    padding: 5px;
+    border-radius: 7px;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    width: 40%;
+  }
+  footer {
+    margin-top: 5px;
+    border-radius: 30px;
+    width: 180px;
+    display: flex;
+    justify-self: center;
+  }
+  .my-h1 {
+    font-size: 1rem;
+    width: 160px;
+    padding: 2px;
+    text-align: center;
+  }
+}
